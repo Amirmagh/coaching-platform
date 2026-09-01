@@ -15,6 +15,14 @@ from apps.coaching.serializers import (
     SessionSerializer,
 )
 
+# ICF-aligned fallback question used only if every candidate question from the
+# GROW question bank unexpectedly fails response validation.
+FALLBACK_QUESTION = "چه چیز دیگری مایلید در این باره با من در میان بگذارید؟"
+
+# Upper bound on how many candidate questions to try before falling back;
+# comfortably larger than the total number of questions across all GROW stages.
+MAX_QUESTION_ATTEMPTS = 32
+
 
 class GoalViewSet(viewsets.ModelViewSet):
     serializer_class = GoalSerializer
@@ -47,6 +55,22 @@ class SessionViewSet(viewsets.ModelViewSet):
         return QuestionFlowState(
             stage=GrowStage(session.grow_stage), asked_questions=frozenset(asked)
         )
+
+    def _select_valid_question(self, state: QuestionFlowState):
+        """Pick the next question, skipping any candidate that fails
+        response validation (advice-giving, interpretation, judgment), and
+        falling back to a safe generic question if none validate."""
+        candidate_state = state
+        for _ in range(MAX_QUESTION_ATTEMPTS):
+            question, candidate_state = next_question(candidate_state)
+            if question is None:
+                return None, candidate_state, None
+            validation = validate_response(question)
+            if validation.is_valid:
+                return question, candidate_state, validation
+
+        fallback_validation = validate_response(FALLBACK_QUESTION)
+        return FALLBACK_QUESTION, candidate_state, fallback_validation
 
     @action(detail=True, methods=["post"])
     def message(self, request, pk=None):
@@ -83,7 +107,7 @@ class SessionViewSet(viewsets.ModelViewSet):
             )
 
         state = self._flow_state(session)
-        question, new_state = next_question(state)
+        question, new_state, validation = self._select_valid_question(state)
 
         if question is None:
             session.status = Session.Status.COMPLETED
@@ -98,7 +122,6 @@ class SessionViewSet(viewsets.ModelViewSet):
                 status=status.HTTP_200_OK,
             )
 
-        validation = validate_response(question)
         if session.grow_stage != new_state.stage.value:
             session.grow_stage = new_state.stage.value
             session.save(update_fields=["grow_stage"])

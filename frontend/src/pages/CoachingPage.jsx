@@ -9,6 +9,12 @@ function CoachingPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const chatEndRef = useRef(null);
+  const nextLocalId = useRef(0);
+
+  const makeLocalId = () => {
+    nextLocalId.current += 1;
+    return `local-${nextLocalId.current}`;
+  };
 
   useEffect(() => {
     const startSession = async () => {
@@ -31,7 +37,10 @@ function CoachingPage() {
     if (!input.trim() || !sessionId) return;
 
     const userText = input;
-    setMessages((prev) => [...prev, { sender: "user", text: userText }]);
+    setMessages((prev) => [
+      ...prev,
+      { id: makeLocalId(), sender: "user", text: userText },
+    ]);
     setInput("");
     setLoading(true);
     setCrisis(null);
@@ -45,7 +54,7 @@ function CoachingPage() {
       if (coachMessage) {
         setMessages((prev) => [
           ...prev,
-          { sender: coachMessage.sender, text: coachMessage.text },
+          { id: coachMessage.id, sender: coachMessage.sender, text: coachMessage.text },
         ]);
       }
     } catch {
@@ -62,9 +71,9 @@ function CoachingPage() {
 
       <div className="card">
         <div className="chat-window">
-          {messages.map((m, idx) => (
+          {messages.map((m) => (
             <div
-              key={idx}
+              key={m.id}
               className={`message ${m.sender}${
                 m.sender === "system" ? " crisis" : ""
               }`}

@@ -111,8 +111,9 @@ IRAN_CRISIS_RESOURCES = [
 def _find_matches(text: str, patterns: list) -> list:
     matches = []
     for pattern in patterns:
-        if re.search(pattern, text, flags=re.IGNORECASE):
-            matches.append(pattern)
+        match = re.search(pattern, text, flags=re.IGNORECASE)
+        if match:
+            matches.append(match.group(0))
     return matches
 
 
