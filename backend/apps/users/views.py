@@ -5,7 +5,7 @@ from rest_framework.throttling import UserRateThrottle
 from rest_framework.views import APIView
 
 from .models import User
-from .services import send_password_reset_email, send_verification_email
+from .tasks import send_password_reset_email_task, send_verification_email_task
 
 
 class EmailThrottle(UserRateThrottle):
@@ -19,7 +19,7 @@ class SendVerificationView(APIView):
     def post(self, request):
         if request.user.email_verified:
             return Response({'detail': 'Email is already verified.'}, status=status.HTTP_400_BAD_REQUEST)
-        send_verification_email(request.user)
+        send_verification_email_task.delay(request.user.pk)
         return Response({'detail': 'Verification email sent.'})
 
 
@@ -43,7 +43,7 @@ class SendPasswordResetView(APIView):
     def post(self, request):
         user = User.objects.filter(email=request.data.get('email', '')).first()
         if user:
-            send_password_reset_email(user)
+            send_password_reset_email_task.delay(user.pk)
         return Response({'detail': 'If the account exists, a reset email has been sent.'})
 
 
