@@ -87,6 +87,13 @@ class PaymentsView(APIView):
         })
 
 
+class SessionsView(APIView):
+    permission_classes = [IsAdminOrModerator]
+
+    def get(self, request):
+        return Response({'results': [], 'total': 0})
+
+
 class AnalyticsView(APIView):
     permission_classes = [IsAdminOrModerator]
 

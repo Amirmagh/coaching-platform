@@ -28,11 +28,15 @@ class CreatePaymentView(APIView):
     def post(self, request):
         amount = request.data.get('amount')
         gateway = request.data.get('gateway', Payment.Gateway.ZARINPAL)
-        if not isinstance(amount, int) or amount <= 0 or gateway not in Payment.Gateway.values:
+        metadata = request.data.get('metadata', {})
+        if (
+            not isinstance(amount, int) or amount <= 0
+            or gateway not in Payment.Gateway.values or not isinstance(metadata, dict)
+        ):
             return Response({'detail': 'Invalid amount or gateway.'}, status=status.HTTP_400_BAD_REQUEST)
         try:
             payment, payment_url = PaymentService.create_payment(
-                request.user, amount, gateway, request.data.get('metadata', {})
+                request.user, amount, gateway, metadata
             )
         except (ValueError, requests.RequestException):
             return Response({'detail': 'Payment gateway is unavailable.'}, status=status.HTTP_503_SERVICE_UNAVAILABLE)
