@@ -8,13 +8,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-    path('api/users/', include('apps.users.urls')),
-    path('api/coaching/', include('apps.coaching.urls')),
-    path('api/sessions/', include('apps.sessions.urls')),
-    path('api/goals/', include('apps.goals.urls')),
-    path('api/messages/', include('apps.messaging.urls')),
+    path('api/auth/', include('apps.users.urls')),
     path('api/payments/', include('apps.payments.urls')),
-    path('api/analytics/', include('apps.analytics.urls')),
+    path('api/admin/', include('apps.administration.urls')),
 ]
 
 if settings.DEBUG:
