@@ -1,0 +1,44 @@
+services:
+  - type: web
+    name: coaching-platform-api
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt && python manage.py collectstatic --no-input
+    startCommand: gunicorn config.wsgi:application --bind 0.0.0.0:$PORT
+    healthCheckPath: /api/token/refresh/
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: coaching-platform-db
+          property: connectionString
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: "False"
+      - key: ALLOWED_HOSTS
+        value: "*"
+      - key: CORS_ALLOWED_ORIGINS
+        sync: false
+      - key: FRONTEND_URL
+        sync: false
+      - key: PAYMENT_CALLBACK_URL
+        sync: false
+      - key: ZARINPAL_MERCHANT_ID
+        sync: false
+      - key: DEFAULT_FROM_EMAIL
+        sync: false
+      - key: EMAIL_BACKEND
+        value: django.core.mail.backends.console.EmailBackend
+
+  - type: static
+    name: coaching-platform-web
+    rootDir: frontend
+    buildCommand: npm ci && npm run build
+    staticPublishPath: dist
+    envVars:
+      - key: VITE_API_URL
+        sync: false
+
+databases:
+  - name: coaching-platform-db
+    plan: free
