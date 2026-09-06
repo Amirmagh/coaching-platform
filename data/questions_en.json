@@ -1,0 +1,224 @@
+{
+  "goal_phase": [
+    {
+      "id": "goal_1",
+      "text": "What would you like to talk about today?",
+      "context": "Opening question to understand the topic",
+      "competencies": ["Establishing agreements", "Presence"]
+    },
+    {
+      "id": "goal_2",
+      "text": "If you walked out of this session having succeeded, what would that look like?",
+      "context": "Helps clarify a concrete goal",
+      "competencies": ["Establishing agreements", "Evoking awareness"]
+    },
+    {
+      "id": "goal_3",
+      "text": "How important is this goal to you, on a scale of 1-10?",
+      "context": "Assessing priority and motivation",
+      "competencies": ["Cultivating trust", "Presence"]
+    },
+    {
+      "id": "goal_4",
+      "text": "By when do you want to achieve this goal?",
+      "context": "Setting a timeframe",
+      "competencies": ["Establishing agreements"]
+    },
+    {
+      "id": "goal_5",
+      "text": "What is driving you toward this goal?",
+      "context": "Understanding intrinsic motivation",
+      "competencies": ["Evoking awareness", "Active listening"]
+    },
+    {
+      "id": "goal_6",
+      "text": "If you achieved this goal, what would change in your life?",
+      "context": "Understanding the impact of the goal",
+      "competencies": ["Evoking awareness"]
+    },
+    {
+      "id": "goal_7",
+      "text": "How would the people who care about you see this goal?",
+      "context": "Considering other perspectives",
+      "competencies": ["Coaching mindset", "Evoking awareness"]
+    },
+    {
+      "id": "goal_8",
+      "text": "What is the biggest thing you could learn from pursuing this goal?",
+      "context": "Learning and growth",
+      "competencies": ["Facilitating growth"]
+    },
+    {
+      "id": "goal_9",
+      "text": "Is this goal important to your heart, or only to your mind?",
+      "context": "Emotional alignment",
+      "competencies": ["Coaching mindset"]
+    },
+    {
+      "id": "goal_10",
+      "text": "If I were coaching you, the first question I would ask is: what do you want? What is your answer?",
+      "context": "Returning to the core of the goal",
+      "competencies": ["Coaching mindset", "Presence"]
+    }
+  ],
+  "reality_phase": [
+    {
+      "id": "reality_1",
+      "text": "What is happening right now in relation to this goal?",
+      "context": "Understanding the current situation",
+      "competencies": ["Active listening"]
+    },
+    {
+      "id": "reality_2",
+      "text": "What have you already tried?",
+      "context": "Exploring past efforts",
+      "competencies": ["Evoking awareness"]
+    },
+    {
+      "id": "reality_3",
+      "text": "What is working well so far?",
+      "context": "Identifying strengths",
+      "competencies": ["Facilitating growth"]
+    },
+    {
+      "id": "reality_4",
+      "text": "What obstacles are standing in your way?",
+      "context": "Identifying challenges",
+      "competencies": ["Evoking awareness"]
+    },
+    {
+      "id": "reality_5",
+      "text": "Who else is affected by this situation?",
+      "context": "Considering stakeholders",
+      "competencies": ["Active listening"]
+    },
+    {
+      "id": "reality_6",
+      "text": "On a scale of 1-10, how satisfied are you with the current situation?",
+      "context": "Measuring current satisfaction",
+      "competencies": ["Presence"]
+    },
+    {
+      "id": "reality_7",
+      "text": "What resources do you already have available?",
+      "context": "Identifying available resources",
+      "competencies": ["Facilitating growth"]
+    },
+    {
+      "id": "reality_8",
+      "text": "What is the real cost of staying where you are?",
+      "context": "Exploring the cost of inaction",
+      "competencies": ["Evoking awareness"]
+    },
+    {
+      "id": "reality_9",
+      "text": "What haven't you told me yet that might be relevant?",
+      "context": "Uncovering hidden information",
+      "competencies": ["Cultivating trust"]
+    },
+    {
+      "id": "reality_10",
+      "text": "How do you know this is really the situation, and not just your interpretation of it?",
+      "context": "Challenging assumptions",
+      "competencies": ["Coaching mindset"]
+    }
+  ],
+  "options_phase": [
+    {
+      "id": "options_1",
+      "text": "What options do you have for moving forward?",
+      "context": "Generating possibilities",
+      "competencies": ["Facilitating growth"]
+    },
+    {
+      "id": "options_2",
+      "text": "What else could you do?",
+      "context": "Expanding the list of options",
+      "competencies": ["Evoking awareness"]
+    },
+    {
+      "id": "options_3",
+      "text": "If there were no constraints, what would you do?",
+      "context": "Removing perceived limitations",
+      "competencies": ["Evoking awareness"]
+    },
+    {
+      "id": "options_4",
+      "text": "What would you advise a friend in your situation to do?",
+      "context": "Gaining perspective",
+      "competencies": ["Coaching mindset"]
+    },
+    {
+      "id": "options_5",
+      "text": "Which of these options excites you the most?",
+      "context": "Assessing motivation for each option",
+      "competencies": ["Presence"]
+    },
+    {
+      "id": "options_6",
+      "text": "What is the cost and benefit of each option?",
+      "context": "Weighing trade-offs",
+      "competencies": ["Facilitating growth"]
+    },
+    {
+      "id": "options_7",
+      "text": "Who could help or support you with each option?",
+      "context": "Identifying support systems",
+      "competencies": ["Active listening"]
+    },
+    {
+      "id": "options_8",
+      "text": "Which option aligns best with your values?",
+      "context": "Values alignment",
+      "competencies": ["Coaching mindset"]
+    }
+  ],
+  "will_phase": [
+    {
+      "id": "will_1",
+      "text": "Which option will you commit to?",
+      "context": "Committing to action",
+      "competencies": ["Establishing agreements"]
+    },
+    {
+      "id": "will_2",
+      "text": "What is the very first step you will take?",
+      "context": "Defining a concrete first step",
+      "competencies": ["Facilitating growth"]
+    },
+    {
+      "id": "will_3",
+      "text": "When exactly will you take this step?",
+      "context": "Setting a deadline",
+      "competencies": ["Establishing agreements"]
+    },
+    {
+      "id": "will_4",
+      "text": "On a scale of 1-10, how committed are you to this action?",
+      "context": "Measuring commitment",
+      "competencies": ["Presence"]
+    },
+    {
+      "id": "will_5",
+      "text": "What could get in the way, and how will you handle it?",
+      "context": "Anticipating obstacles",
+      "competencies": ["Evoking awareness"]
+    },
+    {
+      "id": "will_6",
+      "text": "How will you know you have succeeded?",
+      "context": "Defining success criteria",
+      "competencies": ["Establishing agreements"]
+    },
+    {
+      "id": "will_7",
+      "text": "How would you like to be held accountable?",
+      "context": "Setting up accountability",
+      "competencies": ["Cultivating trust"]
+    }
+  ],
+  "crisis_resources": [
+    { "label": "Crisis Text Line", "phone": "Text HOME to 741741" },
+    { "label": "Emergency Services", "phone": "911" }
+  ]
+}

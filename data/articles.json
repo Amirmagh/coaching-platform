@@ -1,0 +1,34 @@
+[
+  {
+    "id": "article_1",
+    "title_fa": "مدل GROW چیست و چگونه کار می‌کند؟",
+    "title_en": "What is the GROW Model and How Does It Work?",
+    "summary_fa": "آشنایی با چهار مرحله مدل کوچینگ GROW: هدف، واقعیت، گزینه‌ها و اراده.",
+    "summary_en": "An introduction to the four phases of the GROW coaching model: Goal, Reality, Options, and Will.",
+    "category": "coaching-basics"
+  },
+  {
+    "id": "article_2",
+    "title_fa": "چگونه اهداف SMART تعریف کنیم",
+    "title_en": "How to Set SMART Goals",
+    "summary_fa": "راهنمای تعریف اهدافی مشخص، قابل اندازه‌گیری، قابل دستیابی، مرتبط و زمان‌دار.",
+    "summary_en": "A guide to setting Specific, Measurable, Achievable, Relevant, and Time-bound goals.",
+    "category": "goal-setting"
+  },
+  {
+    "id": "article_3",
+    "title_fa": "غلبه بر موانع در مسیر رشد فردی",
+    "title_en": "Overcoming Obstacles on Your Growth Journey",
+    "summary_fa": "راهکارهایی برای شناسایی و عبور از موانع ذهنی و بیرونی.",
+    "summary_en": "Strategies for identifying and overcoming mental and external obstacles.",
+    "category": "personal-growth"
+  },
+  {
+    "id": "article_4",
+    "title_fa": "اهمیت پاسخگویی در دستیابی به اهداف",
+    "title_en": "The Importance of Accountability in Achieving Goals",
+    "summary_fa": "چگونه سیستم‌های پاسخگویی می‌توانند شما را در مسیر هدفتان نگه دارند.",
+    "summary_en": "How accountability systems can keep you on track toward your goals.",
+    "category": "accountability"
+  }
+]
