@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  bot:
+    build: .
+    container_name: scalp_bot
+    volumes:
+      - ./:/app
+    ports:
+      - "8000:8000"
+      - "9000:9000"
+    environment:
+      - PYTHONUNBUFFERED=1

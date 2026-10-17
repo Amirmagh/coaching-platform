@@ -1,0 +1,17 @@
+{
+  "pair": "BTC/USDT",
+  "timeframe": "5m",
+  "days": 365,
+  "dry_run": true,
+  "poll_interval": 30,
+  "default_stake": 50,
+  "telegram": {
+    "bot_token": "PUT_YOUR_BOT_TOKEN_HERE",
+    "chat_id": "PUT_YOUR_CHAT_ID_HERE",
+    "endpoint": "http://localhost:8000/signal"
+  },
+  "strategy": {
+    "execute_endpoint": "http://localhost:9000/execute"
+  },
+  "mode": "confirm"
+}
