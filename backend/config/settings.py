@@ -22,12 +22,8 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     'corsheaders',
     'apps.users',
-    'apps.coaching',
-    'apps.sessions',
-    'apps.goals',
-    'apps.messaging',
     'apps.payments',
-    'apps.analytics',
+    'apps.administration',
 ]
 
 MIDDLEWARE = [
@@ -63,7 +59,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': os.getenv('DB_ENGINE', 'django.db.backends.postgresql'),
         'NAME': os.getenv('DB_NAME', 'coaching_platform'),
         'USER': os.getenv('DB_USER', 'postgres'),
         'PASSWORD': os.getenv('DB_PASSWORD', 'password'),
@@ -121,3 +117,11 @@ CELERY_BROKER_URL = os.getenv('CELERY_BROKER_URL', 'redis://localhost:6379/0')
 CELERY_RESULT_BACKEND = os.getenv('CELERY_RESULT_BACKEND', 'redis://localhost:6379/0')
 CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'
+
+EMAIL_BACKEND = os.getenv(
+    'EMAIL_BACKEND', 'django.core.mail.backends.console.EmailBackend'
+)
+DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL', 'noreply@coaching.local')
+FRONTEND_URL = os.getenv('FRONTEND_URL', 'http://localhost:3000')
+PAYMENT_CALLBACK_URL = os.getenv('PAYMENT_CALLBACK_URL', f'{FRONTEND_URL}/payment/verify')
+ZARINPAL_MERCHANT_ID = os.getenv('ZARINPAL_MERCHANT_ID', '')
