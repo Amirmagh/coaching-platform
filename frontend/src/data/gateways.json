@@ -1,0 +1,32 @@
+{
+  "zarinpal": {
+    "name": "زرین‌پال",
+    "nameEn": "ZarinPal",
+    "requestUrl": "https://api.zarinpal.com/pg/v4/payment/request.json",
+    "verifyUrl": "https://api.zarinpal.com/pg/v4/payment/verify.json",
+    "startPayUrl": "https://www.zarinpal.com/pg/StartPay/",
+    "merchantId": "ZARINPAL_MERCHANT_ID",
+    "currency": "IRR",
+    "enabled": true
+  },
+  "mellat": {
+    "name": "ملت",
+    "nameEn": "Mellat",
+    "requestUrl": "https://bpm.shaparak.ir/pgwchannel/services/pgw",
+    "verifyUrl": "https://bpm.shaparak.ir/pgwchannel/services/pgw",
+    "startPayUrl": "https://bpm.shaparak.ir/pgwchannel/startpay.mellat",
+    "merchantId": "MELLAT_TERMINAL_ID",
+    "currency": "IRR",
+    "enabled": false
+  },
+  "stripe": {
+    "name": "استرایپ",
+    "nameEn": "Stripe",
+    "requestUrl": "https://api.stripe.com/v1/checkout/sessions",
+    "verifyUrl": "https://api.stripe.com/v1/checkout/sessions",
+    "startPayUrl": "https://checkout.stripe.com/pay/",
+    "merchantId": "STRIPE_PUBLISHABLE_KEY",
+    "currency": "USD",
+    "enabled": false
+  }
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "id": "faq_1",
+    "question_fa": "کوچینگ GROW چیست؟",
+    "question_en": "What is GROW coaching?",
+    "answer_fa": "GROW یک مدل کوچینگ ساختاریافته است که شامل چهار مرحله هدف (Goal)، واقعیت (Reality)، گزینه‌ها (Options) و اراده (Will) می‌شود.",
+    "answer_en": "GROW is a structured coaching model consisting of four phases: Goal, Reality, Options, and Will."
+  },
+  {
+    "id": "faq_2",
+    "question_fa": "آیا اطلاعات جلسات من محرمانه است؟",
+    "question_en": "Is my session data confidential?",
+    "answer_fa": "بله، تمام اطلاعات جلسات شما به صورت محرمانه نگهداری می‌شود و فقط برای بهبود تجربه شما استفاده می‌شود.",
+    "answer_en": "Yes, all your session data is kept confidential and used only to improve your experience."
+  },
+  {
+    "id": "faq_3",
+    "question_fa": "چگونه می‌توانم هدف جدید تعریف کنم؟",
+    "question_en": "How can I create a new goal?",
+    "answer_fa": "از داشبورد خود بر روی دکمه «هدف جدید» کلیک کنید و اطلاعات هدف را وارد کنید.",
+    "answer_en": "From your dashboard, click the \"New Goal\" button and fill in the goal details."
+  },
+  {
+    "id": "faq_4",
+    "question_fa": "آیا می‌توانم حساب کاربری خود را حذف کنم؟",
+    "question_en": "Can I delete my account?",
+    "answer_fa": "بله، از صفحه پروفایل می‌توانید گزینه «حذف حساب کاربری» را انتخاب کنید.",
+    "answer_en": "Yes, you can select the \"Delete Account\" option from your profile page."
+  },
+  {
+    "id": "faq_5",
+    "question_fa": "در صورت بروز بحران چه کاری باید انجام دهم؟",
+    "question_en": "What should I do in a crisis?",
+    "answer_fa": "در صورت بروز بحران، لطفاً فوراً با منابع اورژانسی نمایش داده شده در برنامه تماس بگیرید.",
+    "answer_en": "In case of a crisis, please immediately contact the emergency resources shown in the app."
+  }
+]

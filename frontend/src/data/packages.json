@@ -1,0 +1,56 @@
+[
+  {
+    "id": "starter",
+    "name": "شروع کننده",
+    "nameEn": "Starter",
+    "price": 490000,
+    "currency": "IRR",
+    "durationDays": 30,
+    "sessionsPerMonth": 4,
+    "description": "مناسب برای شروع مسیر رشد فردی",
+    "features": [
+      "۴ جلسه کوچینگ در ماه",
+      "دسترسی به چت هوش مصنوعی",
+      "پیگیری اهداف پایه",
+      "پشتیبانی ایمیلی"
+    ],
+    "highlighted": false
+  },
+  {
+    "id": "pro",
+    "name": "حرفه‌ای",
+    "nameEn": "Pro",
+    "price": 990000,
+    "currency": "IRR",
+    "durationDays": 30,
+    "sessionsPerMonth": 8,
+    "description": "محبوب‌ترین پکیج برای پیشرفت مستمر",
+    "features": [
+      "۸ جلسه کوچینگ در ماه",
+      "دسترسی نامحدود به چت هوش مصنوعی",
+      "پیگیری اهداف پیشرفته",
+      "گزارش پیشرفت هفتگی",
+      "پشتیبانی اولویت‌دار"
+    ],
+    "highlighted": true
+  },
+  {
+    "id": "premium",
+    "name": "ویژه",
+    "nameEn": "Premium",
+    "price": 1990000,
+    "currency": "IRR",
+    "durationDays": 30,
+    "sessionsPerMonth": 16,
+    "description": "کامل‌ترین تجربه کوچینگ اختصاصی",
+    "features": [
+      "۱۶ جلسه کوچینگ در ماه",
+      "کوچ اختصاصی انسانی",
+      "دسترسی نامحدود به همه امکانات",
+      "برنامه رشد شخصی‌سازی‌شده",
+      "گزارش پیشرفت روزانه",
+      "پشتیبانی ۲۴/۷"
+    ],
+    "highlighted": false
+  }
+]

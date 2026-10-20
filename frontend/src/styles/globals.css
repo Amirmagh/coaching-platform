@@ -118,8 +118,18 @@ body.dark {
 
 /* Text Truncation */
 .line-clamp-1 { @apply truncate; }
-.line-clamp-2 { @apply line-clamp-2; }
-.line-clamp-3 { @apply line-clamp-3; }
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
 
 /* Scrollbar */
 ::-webkit-scrollbar {
